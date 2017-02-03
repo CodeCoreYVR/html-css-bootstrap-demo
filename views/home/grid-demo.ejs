@@ -1,0 +1,63 @@
+<%- include('../partials/header') %>
+
+<style>
+  /* 👇 selects all children i tags inside of tags with an attribute class
+  where its values contain a substring of 'col-' */
+  [class*='col-'] > i {
+    display: block;
+    background-color: teal;
+    border-radius: 0.25rem;
+    height: 5rem;
+  }
+
+  .row {
+    margin-bottom: 1rem;
+  }
+</style>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2"><i></i></div>
+    <div class="col-md-2"><i></i></div>
+    <div class="col-md-2"><i></i></div>
+    <div class="col-md-6"><i></i></div>
+  </div>
+
+  <!-- column tags can have multipe col-* classes of
+  different sizes (e.g. xs, sm, md, lg). the respective
+  classes will activate depending the size of the screen
+  using media queries -->
+  <div class="row">
+    <div class="col-md-2 col-sm-4"><i></i></div>
+    <div class="col-md-2 col-sm-4"><i></i></div>
+    <div class="col-md-2 col-sm-8"><i></i></div>
+    <div class="col-md-6 col-sm-8"><i></i></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 col-md-offset-4"><i></i></div>
+    <div class="col-sm-4"><i></i></div>
+    <div class="col-sm-8 col-sm-offset-4"><i></i></div>
+  </div>
+
+  <!-- xs columns are always active. they trigger at the minimum
+  size of a page. -->
+  <div class="row">
+    <div class="col-xs-4"><i></i></div>
+    <div class="col-xs-4"><i></i></div>
+    <div class="col-xs-4"><i></i></div>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>
+
+
+
+
+
+
+
+
+
+
+<%# %>

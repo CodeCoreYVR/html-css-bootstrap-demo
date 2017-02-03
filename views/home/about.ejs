@@ -1,0 +1,57 @@
+<%- include('../partials/header') %>
+
+<main class="container-fluid">
+  <h1>The Thing Blog</h1>
+  <p>A blog about awesome and not so awesome things!</p>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <!-- a panel component from bootstrap
+      http://getbootstrap.com/components/#panels -->
+
+      <% for (let i = 0; i < 10; i += 1) { %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4><%= faker.lorem.words(3) %></h4>
+        </div>
+        <div class="panel-body">
+          <%= faker.lorem.paragraphs(2) %>
+        </div>
+      </div>
+      <% } %>
+
+    </div>
+
+    <div class="col-sm-4">
+      <div class="well">
+        <h4>About</h4>
+        <p><%= faker.lorem.paragraph() %></p>
+      </div>
+
+      <ul class="list-group">
+        <% for (let i = 0; i < 20;  i += 1) { %>
+         <%# add css class active if i is equal to 4.
+         ejs tags can be used to generate any html anywhere in an ejs template %>
+         <li class="list-group-item<%= i === 4 ? ' active' : '' %>"><%= faker.lorem.words(3) %></li>
+       <% } %>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<%- include('../partials/footer') %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%# %>

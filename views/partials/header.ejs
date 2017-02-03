@@ -3,5 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Express Template</title>
+    <!-- because we're serving our static files on /, we write the following
+    to get out files in the public folder -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/themes/superhero.css">
+    <!-- the order in which the script tags are declared matters
+    because bootstrap.js depends on jquery.js, jquery must appear first -->
+    <script src="js/jquery-3.1.1.js" charset="utf-8"></script>
+    <script src="js/bootstrap.js" charset="utf-8"></script>
   </head>
   <body>
+    <%- include('navbar') %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -->
